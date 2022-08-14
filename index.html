@@ -46,14 +46,15 @@
   <!-- Card Header -->
   <header class="card-header">
     <div class="container">
-      <div class="bg-card-back">
+      <div class="card-back">
         <img src="./images/bg-card-back.png" alt="">
-        <span class="cvc">000</span>
+        <span class="card-cvc">000</span>
       </div>
-      <div class="bg-card-front">
+      <div class="card-front">
         <div class="rounds">
-          <span class="round-1"></span>
-          <span class="round-2"></span>
+          <!-- <span class="round-1"></span>
+          <span class="round-2"></span> -->
+          <img src="./images/card-logo.svg" alt="">
         </div>
         <img src="./images/bg-card-front.png" alt="">
         <div class="card-info">
@@ -65,7 +66,55 @@
     </div>
   </header>
 
-  <!-- To be continue -->
+  <!-- Card Form -->
+  <main class="card-form">
+    <aside class="card-form-sidebar">
+      <div class="container">
+        <div class="card-back">
+          <img src="./images/bg-card-back.png" alt="">
+          <span class="card-cvc">000</span>
+        </div>
+        <div class="card-front">
+          <div class="rounds">
+            <!-- <span class="round-1"></span>
+            <span class="round-2"></span> -->
+            <img src="./images/card-logo.svg" alt="">
+          </div>
+          <img src="./images/bg-card-front.png" alt="">
+          <div class="card-info">
+            <span class="card-number">0000 0000 0000 0000</span>
+            <span class="card-holder-name">Jane Appleseed</span>
+            <span class="card-exp-date">00/00</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <form>
+      <div class="container">
+        <div class="card-form-input-wrapper">
+          <label for="card-holder-name" class="card-form-label">CARDHOLDER NAME</label>
+          <input class="card-form-input" type="text" placeholder="e.g. Jane Appleseed" id="card-holder-name">
+        </div>
+        <div class="card-form-input-wrapper">
+          <label for="" class="card-form-label">CARD NUMBER</label>
+          <input class="card-form-input" type="text" placeholder="e.g. 1234 5678 9123 0000">
+        </div>
+        <div class="card-form-input-date-wrapper">
+          <div class="card-form-input-wrapper">
+            <label for="" class="card-form-label">EXP. DATE (MM/YY)</label>
+            <input class="card-form-input month" type="text" placeholder="MM">
+            <input class="card-form-input year" type="text" placeholder="YY">
+          </div>
+          <div class="card-form-input-wrapper">
+            <label for="" class="card-form-label">CVC</label>
+            <input class="card-form-input cvc" type="text" placeholder="e.g. 123">
+          </div>
+        </div>
+        <button type="submit" class="card-form-submit">Confirm</button>
+      </div>
+    </form>
+  </main>
   
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
