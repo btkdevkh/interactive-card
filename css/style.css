@@ -44,65 +44,52 @@ img {
 }
 .card-back,
 .card-front {
-  width: 260px;
   position: absolute;
+  width: 260px;
+  height: 145px;
+  border-radius: 10px;
 }
 .card-back {
   right: 0px;
-}
-.card-front {
-  left: 0;
-  top: 105px;
+  background: url('../images/bg-card-back.png') center center / cover no-repeat;
 }
 .card-cvc {
   color: var(--white);
   font-size: 0.6rem;
   position: absolute;
-  top: 48%;
+  top: 49%;
   right: 35px;
   transform: translateY(-47%);
 }
+.card-front {
+  left: 0;
+  top: 105px;
+  background: url('../images/bg-card-front.png') center center / cover no-repeat;
+}
 .rounds {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 7px;
   padding: 15px;
 }
 .rounds img {
   width: 30px;
 }
-.round-1,
-.round-2 {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: var(--white);
-}
-.round-2 {
-  width: 12px;
-  height: 12px;
-  background-color: transparent;
-  border: 1px solid var(--white);
-}
 .card-info {
+  margin-top: 15px;
   color: var(--white);
-  font-size: 1.1rem;
-  position: absolute;
-  top: 75px;
   padding: 0 15px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+.card-info div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .card-holder-name {
   font-size: 0.7rem;
   text-transform: uppercase;
 }
 .card-exp-date {
-  position: absolute;
-  top: 38px;
-  right: 5px;
   font-size: 0.6rem;
 }
 
@@ -187,7 +174,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 105px;
 }
 .card-complete img {
   width: 70px;
@@ -238,5 +224,8 @@ img {
   .card-form form .container {
     margin-top: 55px;
     margin-right: 75px;
+  }
+  .card-complete.active {
+    margin-right: 105px;
   }
 }

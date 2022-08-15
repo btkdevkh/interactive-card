@@ -14,20 +14,20 @@
   <header class="card-header">
     <div class="container">
       <div class="card-back">
-        <img src="./images/bg-card-back.png" alt="">
         <span class="card-cvc">000</span>
       </div>
       <div class="card-front">
         <div class="rounds">
           <img src="./images/card-logo.svg" alt="">
         </div>
-        <img src="./images/bg-card-front.png" alt="">
         <div class="card-info">
           <span class="card-number">0000 0000 0000 0000</span>
-          <span class="card-holder-name">Jane Appleseed</span>
-          <div class="card-exp-date">
-            <span class="card-exp-date-month">00/</span>
-            <span class="card-exp-date-year">00</span>
+          <div>
+            <span class="card-holder-name">Jane Appleseed</span>
+            <div class="card-exp-date">
+              <span class="card-exp-date-month">00/</span>
+              <span class="card-exp-date-year">00</span>
+            </div>
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@
     <aside class="card-form-sidebar">
     </aside>
 
-    <form data-form="data-form">
+    <form id="form">
       <div class="container">
         <div class="card-form-input-wrapper">
           <label for="card-holder-name" class="card-form-label">CARDHOLDER NAME</label>
@@ -57,14 +57,14 @@
           </div>
           <div class="card-form-input-wrapper">
             <label for="" class="card-form-label">CVC</label>
-            <input class="card-form-input cvc" type="text" placeholder="e.g. 123">
+            <input class="card-form-input cvc" type="text" placeholder="e.g. 123" id="card-cvc">
           </div>
         </div>
         <button type="submit" class="card-form-submit">Confirm</button>
       </div>
     </form>
 
-    <section class="card-complete">
+    <section class="card-complete" id="card-complete">
       <div class="container">
         <img src="./images/icon-complete.svg" alt="">
         <h2>THANK YOU !</h2>
