@@ -110,7 +110,11 @@ img {
 .card-form {
   background-color: var(--white);
 }
-.card-form form .container {
+.card-form form.active {
+  display: none;
+}
+.card-form form .container,
+.card-complete .container {
   width: 375px;
   margin: 0 auto;
 }
@@ -149,7 +153,8 @@ img {
 .card-form-input.year {
   width: 48%;
 }
-.card-form-submit {
+.card-form-submit,
+.card-form-button {
   display: block;
   width: 100%;
   padding: 10px;
@@ -158,10 +163,42 @@ img {
   font-size: 0.9rem;
   color: var(--white);
   background-color: var(--very-dark-violet);
+  cursor: pointer;
+}
+.invalid {
+  border: 1px solid var(--input-error)
+}
+.card-form-input.invalid:focus {
+  outline: 0;
+  border: 1px solid var(--input-error)
 }
 
+/* Card Sidebar */
 .card-form-sidebar {
   display: none;
+}
+
+/* Card Complete */
+.card-complete {
+  display: none;
+  text-align: center;
+}
+.card-complete.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 105px;
+}
+.card-complete img {
+  width: 70px;
+  margin-bottom: 25px;
+}
+.card-complete h2 {
+  margin-bottom: 15px;
+}
+.card-complete p {
+  margin-bottom: 35px;
+  color: var(--dark-grayish-violet);
 }
 
 @media (min-width: 920px) {

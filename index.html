@@ -6,43 +6,10 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  <script src="./main.js" defer></script>
   <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  <!-- 0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm -->
-
-  <!-- Completed state start -->
-
-  <!-- Thank you!
-  We've added your card details
-  Continue -->
-
   <!-- Card Header -->
   <header class="card-header">
     <div class="container">
@@ -52,15 +19,16 @@
       </div>
       <div class="card-front">
         <div class="rounds">
-          <!-- <span class="round-1"></span>
-          <span class="round-2"></span> -->
           <img src="./images/card-logo.svg" alt="">
         </div>
         <img src="./images/bg-card-front.png" alt="">
         <div class="card-info">
           <span class="card-number">0000 0000 0000 0000</span>
           <span class="card-holder-name">Jane Appleseed</span>
-          <span class="card-exp-date">00/00</span>
+          <div class="card-exp-date">
+            <span class="card-exp-date-month">00/</span>
+            <span class="card-exp-date-year">00</span>
+          </div>
         </div>
       </div>
     </div>
@@ -69,28 +37,9 @@
   <!-- Card Form -->
   <main class="card-form">
     <aside class="card-form-sidebar">
-      <div class="container">
-        <div class="card-back">
-          <img src="./images/bg-card-back.png" alt="">
-          <span class="card-cvc">000</span>
-        </div>
-        <div class="card-front">
-          <div class="rounds">
-            <!-- <span class="round-1"></span>
-            <span class="round-2"></span> -->
-            <img src="./images/card-logo.svg" alt="">
-          </div>
-          <img src="./images/bg-card-front.png" alt="">
-          <div class="card-info">
-            <span class="card-number">0000 0000 0000 0000</span>
-            <span class="card-holder-name">Jane Appleseed</span>
-            <span class="card-exp-date">00/00</span>
-          </div>
-        </div>
-      </div>
     </aside>
 
-    <form>
+    <form data-form="data-form">
       <div class="container">
         <div class="card-form-input-wrapper">
           <label for="card-holder-name" class="card-form-label">CARDHOLDER NAME</label>
@@ -98,13 +47,13 @@
         </div>
         <div class="card-form-input-wrapper">
           <label for="" class="card-form-label">CARD NUMBER</label>
-          <input class="card-form-input" type="text" placeholder="e.g. 1234 5678 9123 0000">
+          <input class="card-form-input" type="text" placeholder="e.g. 1234 5678 9123 0000" id="card-number">
         </div>
         <div class="card-form-input-date-wrapper">
           <div class="card-form-input-wrapper">
             <label for="" class="card-form-label">EXP. DATE (MM/YY)</label>
-            <input class="card-form-input month" type="text" placeholder="MM">
-            <input class="card-form-input year" type="text" placeholder="YY">
+            <input class="card-form-input month" type="text" placeholder="MM" id="card-exp-date-month">
+            <input class="card-form-input year" type="text" placeholder="YY" id="card-exp-date-year">
           </div>
           <div class="card-form-input-wrapper">
             <label for="" class="card-form-label">CVC</label>
@@ -114,6 +63,15 @@
         <button type="submit" class="card-form-submit">Confirm</button>
       </div>
     </form>
+
+    <section class="card-complete">
+      <div class="container">
+        <img src="./images/icon-complete.svg" alt="">
+        <h2>THANK YOU !</h2>
+        <p>We've added your card details</p>
+        <button type="button" class="card-form-button">Continue</button>
+      </div>
+    </section>
   </main>
   
   <!-- <div class="attribution">
